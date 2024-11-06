@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Menu Alerts</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="main-content">
+      <h1>Menu Alerts</h1>
+      <ul>
+        <% specials.forEach(alert => { %>
+        <li>
+          <strong><%= alert.restaurant %>:</strong>
+          <%= alert.special.name ? alert.special.name + ' - ' +
+          alert.special.description : alert.special %>
+        </li>
+        <% }) %>
+      </ul>
+      <a href="/">Back to Home</a>
+    </main>
+  </body>
+</html>
